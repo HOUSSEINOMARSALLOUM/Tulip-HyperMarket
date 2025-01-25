@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: 142 76% 36%;
+  --primary-foreground: 355 100% 100%;
+  --secondary: 142 33% 96%;
+  --secondary-foreground: 142 76% 36%;
+  --muted: 142 33% 96%;
+  --muted-foreground: 142 10% 40%;
+  --accent: 142 33% 96%;
+  --accent-foreground: 142 76% 36%;
+  --background: 0 0% 100%;
+  --foreground: 142 10% 10%;
+  --card: 0 0% 100%;
+  --card-foreground: 142 10% 10%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 142 10% 10%;
+  --border: 142 20% 90%;
+  --input: 142 20% 90%;
+  --ring: 142 76% 36%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --primary: 142 76% 36%;
+  --primary-foreground: 355 100% 100%;
+  --secondary: 142 33% 10%;
+  --secondary-foreground: 355 100% 100%;
+  --muted: 142 33% 10%;
+  --muted-foreground: 142 10% 70%;
+  --accent: 142 33% 10%;
+  --accent-foreground: 355 100% 100%;
+  --background: 142 10% 5%;
+  --foreground: 142 10% 98%;
+  --card: 142 10% 5%;
+  --card-foreground: 142 10% 98%;
+  --popover: 142 10% 5%;
+  --popover-foreground: 142 10% 98%;
+  --border: 142 20% 20%;
+  --input: 142 20% 20%;
+  --ring: 142 76% 36%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.slide-in {
+  animation: slide-in 0.2s ease-out;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
